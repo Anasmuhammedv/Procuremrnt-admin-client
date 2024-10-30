@@ -11,7 +11,7 @@ const Sidebar = () => {
   const menuItems = [
     {
       name: "Dashboard",
-      link: '/k',
+      link: '/Dashboard',
     },
     {
       name: "Suppliers",
@@ -19,11 +19,11 @@ const Sidebar = () => {
     },
     {
       name: "Item",
-      link: '/item',
+      link: '/itemTable',
     },
     {
       name: "Purchase Order",
-      link: '/purchase-order', 
+      link: '/purchaseOrder', 
     }
   ];
 

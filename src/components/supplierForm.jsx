@@ -24,7 +24,7 @@ const SupplierForm = () => {
     try {
       await createSupplier(supplier);
       alert('Supplier created successfully');
-      navigate('/');
+      navigate('/supplierTable');
     } catch (error) {
       console.error('Error creating supplier:', error);
       alert('Failed to create supplier');

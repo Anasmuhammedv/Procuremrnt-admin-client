@@ -1,6 +1,9 @@
 
 import axios from 'axios';
 
+
+//supplier route
+
 export const createSupplier = async (supplierData) => {
     try {
         const response = await axios.post('http://localhost:5001/api/supplier', supplierData);
@@ -55,3 +58,54 @@ export const deleteSupplier = async(id)=>{
         
     }
 }
+
+
+
+
+//item route
+
+
+export const getAllItem= async()=>{
+    try {
+        const res = await axios.get('http://localhost:5001/api/items')
+        console.log(res,"HAI");
+        
+        return res.data
+    } catch (error) {
+        
+    }
+
+}
+
+export const createItem = async(data)=>{
+    console.log(data,"this is data");
+    
+   try {
+     const res = await axios.post('http://localhost:5001/api/item',data)
+   
+     return res.data
+     
+   } catch (error) {
+    
+   }
+}
+
+
+//createpurchase order
+
+export const createPurchaseOrder = async (data) => {
+    const res = await axios.post('http://localhost:5001/api/purchaseOrder', data);
+    return res.data;
+  };
+
+
+
+export const exportPurchaseOrder = async(id)=>{
+    const res = await axios.get(`http://localhost:5001/api/purchaseOrder/${id}` )
+       
+     console.log(res);
+     
+    return res
+}
+  
+

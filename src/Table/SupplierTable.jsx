@@ -1,4 +1,3 @@
-// components/SupplierTable.jsx
 import { useEffect, useState } from "react";
 import { getAllSupplier, deleteSupplier } from "../services/api";
 import { useNavigate } from "react-router-dom";
@@ -46,9 +45,9 @@ const SupplierTable = () => {
   if (error) return <p>Error loading suppliers: {error.message}</p>;
 
   return (
-    <div className="container mx-auto my-4 p-4 w-3/5">
+    <div className="container mx-auto p-4 w-2/3 ml-96 ">
       <h2 className="text-2xl font-bold mb-4">Suppliers</h2>
-      <button onClick={() => navigate("/supplier/create")} className="mt-4 bg-black text-white p-2 rounded ">
+      <button onClick={() => navigate("/supplier/create")} className="mt-4 mb-4 bg-slate-800 text-white p-2 rounded ">
         <MdCreateNewFolder/>
       </button>
       <table className="min-w-full border">
@@ -60,7 +59,6 @@ const SupplierTable = () => {
             <th className="border p-2">Status</th>
             <th className="border p-2">Country</th>
             <th className="border p-2">Actions</th>
-            {/* <th className="border p-2">Actions</th> Added Actions header */}
           </tr>
         </thead>
         <tbody>
@@ -71,7 +69,7 @@ const SupplierTable = () => {
               <td className="border p-2">{mobileNo}</td>
               <td className="border p-2">{status}</td>
               <td className="border p-2">{country}</td>
-              <td className="border p-2"> {/* Added Actions column */}
+              <td className="border p-2">
                 <button onClick={() => handleEdit(_id)} className="text-blue-500 mr-2">
                   <MdOutlineEdit/>
                 </button>

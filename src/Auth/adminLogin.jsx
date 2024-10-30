@@ -17,7 +17,7 @@ const AdminLoginPage = () => {
       const response = await axios.post('http://localhost:5001/api/login', { email, password });
       if(response.status==200){
         alert('Login successful:');
-        navigate('/supplierTable')
+        navigate('/Dashboard')
         console.log(response);
       }
      

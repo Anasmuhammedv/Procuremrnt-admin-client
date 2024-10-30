@@ -5,6 +5,10 @@ import SupplierForm from './components/supplierForm';
 import Sidebar from './pages/SideBar';
 import SupplierTable from './Table/SupplierTable';
 import SupplierView from './view/SupplierView';
+import ItemList from './Table/itemTable';
+import CreateItem from './components/createItem';
+import CreatePurchaseOrder from './Table/purchaseOrderTable';
+import DashBoard from './pages/adminDashboard';
 
 function App() {
   return (
@@ -38,9 +42,46 @@ function App() {
               </div>
             </>
           } />
+           <Route path="/itemTable" element={
+            <>
+              <Sidebar />
+              <div className="main-content">
+                <ItemList />
+              </div>
+            </>
+          } />
+          <Route path="/itemNew" element={
+            <>
+              <Sidebar />
+              <div className="main-content">
+                <CreateItem />
+              </div>
+            </>
+          } />
+           <Route path="/purchaseOrder" element={
+            <>
+              <Sidebar />
+              <div className="main-content">
+                <CreatePurchaseOrder />
+              </div>
+            </>
+          } />
+             <Route path="/Dashboard" element={
+            <>
+              <Sidebar />
+              <div className="main-content">
+                <DashBoard />
+              </div>
+            </>
+          } />
         </Routes>
+        
       </div>
     </Router>
+
+
+
+  
   );
 }
 
